@@ -1,0 +1,9 @@
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\bin\Debug\netstandard2.0\Haosen.Models.deps.json
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\bin\Debug\netstandard2.0\Haosen.Models.dll
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\bin\Debug\netstandard2.0\Haosen.Models.pdb
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.csproj.CoreCompileInputs.cache
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.AssemblyInfoInputs.cache
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.AssemblyInfo.cs
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.dll
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.pdb
+C:\MyDirectory\sourcecode\net-samples\haosen-api-master\Haosen.Solution\Haosen.Models\obj\Debug\netstandard2.0\Haosen.Models.csprojAssemblyReference.cache
