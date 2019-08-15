@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Api", "Haosen.Api\Haosen.Api.csproj", "{89DD5D39-032E-4F52-82BA-95AF9737D711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haosen.Api", "Haosen.Api\Haosen.Api.csproj", "{89DD5D39-032E-4F52-82BA-95AF9737D711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Models", "Haosen.Models\Haosen.Models.csproj", "{5C13247C-663D-482F-9420-BAD905456D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haosen.Models", "Haosen.Models\Haosen.Models.csproj", "{5C13247C-663D-482F-9420-BAD905456D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Common", "Haosen.Common\Haosen.Common.csproj", "{C36CA04C-5199-4D63-ADDC-6436469A09EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haosen.Common", "Haosen.Common\Haosen.Common.csproj", "{C36CA04C-5199-4D63-ADDC-6436469A09EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Bll", "Haosen.Bll\Haosen.Bll.csproj", "{43417C91-6610-46D3-BF2E-EF15B064F4E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haosen.Bll", "Haosen.Bll\Haosen.Bll.csproj", "{43417C91-6610-46D3-BF2E-EF15B064F4E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Dal", "Haosen.Dal\Haosen.Dal.csproj", "{33EC6FF2-1184-440B-B171-B969E8591A97}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haosen.Api.ConsoleTest", "Haosen.Api.ConsoleTest\Haosen.Api.ConsoleTest.csproj", "{609D01C8-993A-481F-8122-9131A8F6C974}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haosen.Dal", "Haosen.Dal\Haosen.Dal.csproj", "{33EC6FF2-1184-440B-B171-B969E8591A97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{33EC6FF2-1184-440B-B171-B969E8591A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33EC6FF2-1184-440B-B171-B969E8591A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33EC6FF2-1184-440B-B171-B969E8591A97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{609D01C8-993A-481F-8122-9131A8F6C974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{609D01C8-993A-481F-8122-9131A8F6C974}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{609D01C8-993A-481F-8122-9131A8F6C974}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{609D01C8-993A-481F-8122-9131A8F6C974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
