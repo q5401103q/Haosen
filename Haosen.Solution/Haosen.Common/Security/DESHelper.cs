@@ -30,24 +30,26 @@ namespace Haosen.Common.Security
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
 
             string encrypt = null;
-            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-            des.Mode = CipherMode.CBC;
-            des.Padding = PaddingMode.PKCS7;
-
-            try
+            using (TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider())
             {
-                using (MemoryStream mStream = new MemoryStream())
+                des.Mode = CipherMode.CBC;
+                des.Padding = PaddingMode.PKCS7;
+
+                try
                 {
-                    using (CryptoStream cStream = new CryptoStream(mStream, des.CreateEncryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                    using (MemoryStream mStream = new MemoryStream())
                     {
-                        cStream.Write(plainTextBytes, 0, plainTextBytes.Length);
-                        cStream.FlushFinalBlock();
-                        encrypt = Convert.ToBase64String(mStream.ToArray());
+                        using (CryptoStream cStream = new CryptoStream(mStream, des.CreateEncryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                        {
+                            cStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                            cStream.FlushFinalBlock();
+                            encrypt = Convert.ToBase64String(mStream.ToArray());
+                        }
                     }
                 }
+                catch { }
+                des.Clear();
             }
-            catch { }
-            des.Clear();
 
             return returnNull ? encrypt : (encrypt == null ? string.Empty : encrypt);
         }
@@ -67,24 +69,26 @@ namespace Haosen.Common.Security
             byte[] encryptedTextBytes = Convert.FromBase64String(encryptedText);
 
             string decrypt = null;
-            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-            des.Mode = CipherMode.CBC;
-            des.Padding = PaddingMode.PKCS7;
-
-            try
+            using (TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider())
             {
-                using (MemoryStream mStream = new MemoryStream())
+                des.Mode = CipherMode.CBC;
+                des.Padding = PaddingMode.PKCS7;
+
+                try
                 {
-                    using (CryptoStream cStream = new CryptoStream(mStream, des.CreateDecryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                    using (MemoryStream mStream = new MemoryStream())
                     {
-                        cStream.Write(encryptedTextBytes, 0, encryptedTextBytes.Length);
-                        cStream.FlushFinalBlock();
-                        decrypt = Encoding.UTF8.GetString(mStream.ToArray()).TrimEnd(new char[] { '\0' });
+                        using (CryptoStream cStream = new CryptoStream(mStream, des.CreateDecryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                        {
+                            cStream.Write(encryptedTextBytes, 0, encryptedTextBytes.Length);
+                            cStream.FlushFinalBlock();
+                            decrypt = Encoding.UTF8.GetString(mStream.ToArray()).TrimEnd(new char[] { '\0' });
+                        }
                     }
                 }
+                catch { }
+                des.Clear();
             }
-            catch { }
-            des.Clear();
 
             return returnNull ? decrypt : (decrypt == null ? string.Empty : decrypt);
         }
@@ -107,24 +111,26 @@ namespace Haosen.Common.Security
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
 
             string encrypt = null;
-            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-            des.Mode = CipherMode.ECB;
-            des.Padding = PaddingMode.PKCS7;
-
-            try
+            using (TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider())
             {
-                using (MemoryStream mStream = new MemoryStream())
+                des.Mode = CipherMode.ECB;
+                des.Padding = PaddingMode.PKCS7;
+
+                try
                 {
-                    using (CryptoStream cStream = new CryptoStream(mStream, des.CreateEncryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                    using (MemoryStream mStream = new MemoryStream())
                     {
-                        cStream.Write(plainTextBytes, 0, plainTextBytes.Length);
-                        cStream.FlushFinalBlock();
-                        encrypt = Convert.ToBase64String(mStream.ToArray());
+                        using (CryptoStream cStream = new CryptoStream(mStream, des.CreateEncryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                        {
+                            cStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                            cStream.FlushFinalBlock();
+                            encrypt = Convert.ToBase64String(mStream.ToArray());
+                        }
                     }
                 }
+                catch { }
+                des.Clear();
             }
-            catch { }
-            des.Clear();
 
             return returnNull ? encrypt : (encrypt == null ? string.Empty : encrypt);
         }
@@ -144,24 +150,26 @@ namespace Haosen.Common.Security
             byte[] encryptedTextBytes = Convert.FromBase64String(encryptedText);
 
             string decrypt = null;
-            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-            des.Mode = CipherMode.ECB;
-            des.Padding = PaddingMode.PKCS7;
-
-            try
+            using (TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider())
             {
-                using (MemoryStream mStream = new MemoryStream())
+                des.Mode = CipherMode.ECB;
+                des.Padding = PaddingMode.PKCS7;
+
+                try
                 {
-                    using (CryptoStream cStream = new CryptoStream(mStream, des.CreateDecryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                    using (MemoryStream mStream = new MemoryStream())
                     {
-                        cStream.Write(encryptedTextBytes, 0, encryptedTextBytes.Length);
-                        cStream.FlushFinalBlock();
-                        decrypt = Encoding.UTF8.GetString(mStream.ToArray()).TrimEnd(new char[] { '\0' });
+                        using (CryptoStream cStream = new CryptoStream(mStream, des.CreateDecryptor(keyBytes, ivBytes), CryptoStreamMode.Write))
+                        {
+                            cStream.Write(encryptedTextBytes, 0, encryptedTextBytes.Length);
+                            cStream.FlushFinalBlock();
+                            decrypt = Encoding.UTF8.GetString(mStream.ToArray()).TrimEnd(new char[] { '\0' });
+                        }
                     }
                 }
+                catch { }
+                des.Clear();
             }
-            catch { }
-            des.Clear();
 
             return returnNull ? decrypt : (decrypt == null ? string.Empty : decrypt);
         }
